@@ -1,0 +1,134 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 28px;
+  background: rgba(247, 245, 239, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(29, 59, 42, 0.12);
+}
+
+.landing-page .navbar {
+  background: rgba(10, 26, 16, 0.45);
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+  position: relative;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--leaf-dark);
+}
+
+.landing-page .navbar-brand {
+  color: var(--white);
+}
+
+.brand-leaf {
+  display: inline-block;
+  font-size: 1.3rem;
+  animation: sway 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link {
+  position: relative;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--leaf-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.landing-page .nav-link {
+  color: var(--white);
+}
+
+.nav-link:hover {
+  background: rgba(46, 107, 62, 0.12);
+}
+
+.nav-link.active {
+  background: var(--leaf);
+  color: var(--white);
+}
+
+.landing-page .nav-link.active {
+  background: var(--leaf-light);
+}
+
+.nav-cart {
+  border: 2px solid var(--leaf);
+  color: var(--leaf-dark);
+}
+
+.landing-page .nav-cart {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: var(--white);
+}
+
+.nav-cart.active {
+  border-color: var(--leaf);
+  background: var(--leaf);
+  color: var(--white);
+}
+
+.cart-label {
+  display: inline-block;
+}
+
+.cart-badge {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--danger);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 14px;
+  }
+
+  .cart-label {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 8px 11px;
+  }
+}

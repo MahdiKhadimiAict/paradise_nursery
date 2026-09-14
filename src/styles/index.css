@@ -1,0 +1,101 @@
+@import './navbar.css';
+@import './pp.css';
+@import './products.css';
+@import './cart.css';
+
+:root {
+  --leaf-dark: #1d3b2a;
+  --leaf: #2e6b3e;
+  --leaf-light: #4c9a5a;
+  --cream: #f7f5ef;
+  --sand: #f0ead9;
+  --text: #21301f;
+  --muted: #5d6b5a;
+  --danger: #b3423a;
+  --white: #ffffff;
+  --shadow: 0 10px 30px rgba(29, 59, 42, 0.14);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--cream);
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--leaf);
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--leaf);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  background: var(--leaf-light);
+}
+
+.btn-secondary {
+  background: var(--sand);
+  color: var(--leaf-dark);
+}
+
+.btn-secondary:hover {
+  background: #e3d9bf;
+}
+
+.btn:disabled,
+.btn.disabled {
+  opacity: 1;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
