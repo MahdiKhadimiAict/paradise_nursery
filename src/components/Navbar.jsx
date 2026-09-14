@@ -21,6 +21,9 @@ export default function Navbar() {
         <NavLink to="/products" className="nav-link">
           Plants
         </NavLink>
+        <NavLink to="/about" className="nav-link">
+          About
+        </NavLink>
         <NavLink to="/cart" className="nav-link nav-cart" aria-label="Shopping cart">
           <svg
             className="cart-icon"
