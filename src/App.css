@@ -1,0 +1,18 @@
+/* ============================================================
+   App.css — implements the background for the landing page
+   of the Paradise Nursery website.
+   ============================================================ */
+
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* Background image for the Paradise Nursery landing page */
+  background-image: url('https://images.unsplash.com/photo-1462143338528-eca9936a4d09?auto=format&fit=crop&w=1920&q=80');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
